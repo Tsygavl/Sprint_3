@@ -8,7 +8,7 @@ class Locators:
     # Кнопка Войти
     ENT_BUTTON = (By.XPATH, '//button[contains(text(),"Войти")]')
     # Кнопка-огурец Зарегистрироваться
-    REGISTRATION_BUTTON = (By.XPATH, '//button[contains(text(),"Зарегистрироваться")'])
+    REGISTRATION_BUTTON = (By.XPATH, '//button[contains(text(),"Зарегистрироваться")]')
     # Кнопка Восстановить
     RECOVER_BUTTON = (By.XPATH, '//button[contains(text(),"Восстановить")]')
     # Кнопка Сохранить
@@ -41,3 +41,5 @@ class Locators:
     NAME = (By.XPATH, "//label[contains(text(),'Имя')]")
     # Поле Восстановить пароль
     CODE_RECOVER = (By.XPATH, "//label[contains(text(),'Введите код из письма')]")
+    # Кнопка "Войти" в востановление пароля"
+    BUTTON_COME_IN = (By.XPATH, '//a[@class="Auth_link__1fOlj"]')

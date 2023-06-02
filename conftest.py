@@ -4,7 +4,7 @@ from selenium import webdriver
 url = 'https://stellarburgers.nomoreparties.site'
 
 @pytest.fixture
-    def driver():
+def driver():
     browser = webdriver.Chrome(executable_path='./chromedriver')
     browser.get(url)
     yield browser
