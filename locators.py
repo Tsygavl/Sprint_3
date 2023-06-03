@@ -2,9 +2,9 @@ from selenium.webdriver.common.by import By
 
 class Locators:
     # Личный кабинет
-    ACC_BUTTON = (By.XPATH, '//p[@class="AppHeader_header__linkText__3q_va ml-2"]')
+    ACC_BUTTON = (By.XPATH, "//a[@href = '/account']")
     # Кнопка Зарегистрироваться
-    REG_BUTTON = (By.XPATH, '//a[@class="Auth_link__1fOlj"]')
+    REG_BUTTON = (By.XPATH, "//a[@href='/register']")
     # Кнопка Войти
     ENT_BUTTON = (By.XPATH, '//button[contains(text(),"Войти")]')
     # Кнопка-огурец Зарегистрироваться
@@ -16,11 +16,11 @@ class Locators:
     # Текст - "Некорректный пароль"
     INCORECT_PASSWORD_TEXT = (By.XPATH,'//p[@class="input__error text_type_main-default"]')
     # Кнопка Конструктор
-    CONSTRUCTOR_BUTTON = (By.XPATH, '//p[contains(text(),"Конструктор")]')
+    CONSTRUCTOR_BUTTON = (By.XPATH, "//p[contains(text(),'Конструктор')]/parent::a")
     # логотип Stellar Burgers
-    LOGO_BUTTON =  (By.XPATH, '//div[@class="AppHeader_header__logo__2D0X2"]')
+    LOGO_BUTTON =  (By.XPATH, "//div[contains(@class, 'logo')]/a")
     # Кнопка Выход
-    EXIT_BUTTON = (By.XPATH, '//button[@class="Account_button__14Yp3 text text_type_main-medium text_color_inactive"]')
+    EXIT_BUTTON = (By.XPATH, "//button[text() = 'Выход']")
     # Секция Соусы
     SAUSE_SECTIONS = (By.XPATH, '//span[contains(text(),"Соусы")]')
     # Секция Булки
@@ -34,12 +34,12 @@ class Locators:
     # Заголовок Начинки
     TOPPING_HEADING = (By.XPATH, "//h2[contains(text(),'Начинки')]")
     # email
-    EMAIL = (By.XPATH, "//label[contains(text(),'Email')]")
+    EMAIL = (By.XPATH, "//label[text() = 'Email']/parent::div/input")
     # password
     PASSWORD = (By.XPATH, "//label[contains(text(),'Пароль')]")
     # name
-    NAME = (By.XPATH, "//label[contains(text(),'Имя')]")
+    NAME = (By.XPATH, "//label[text() = 'Имя']/parent::div/input")
     # Поле Восстановить пароль
     CODE_RECOVER = (By.XPATH, "//label[contains(text(),'Введите код из письма')]")
     # Кнопка "Войти" в востановление пароля"
-    BUTTON_COME_IN = (By.XPATH, '//a[@class="Auth_link__1fOlj"]')
+    BUTTON_COME_IN = (By.XPATH, "//a[@href='/login']")
