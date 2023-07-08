@@ -2,7 +2,8 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from data import BASE, LOGIN_PAGE, LOGIN, PASSWORD
+from data import LOGIN, PASSWORD
+from url import URL
 from locators import Locators as L
 
 
@@ -10,14 +11,14 @@ from locators import Locators as L
 def driver():
     driver = webdriver.Chrome()
     driver.maximize_window()
-    driver.get(BASE)
+    driver.get(URL.BASE)
     yield driver
     driver.quit()
 
 
 @pytest.fixture()
-def valid_register(driver):
-    driver.get(LOGIN_PAGE)
+def valid_sign_in(driver):
+    driver.get(URL.LOGIN_PAGE)
     driver.find_element(*L.login_email).send_keys(LOGIN)
     driver.find_element(*L.password).send_keys(PASSWORD)
     driver.find_element(*L.login_button).click()
