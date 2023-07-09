@@ -6,7 +6,7 @@ class Locators:
     login_button = By.XPATH, ".//button[text()=\'Войти\']"  # Кнопка "Войти" авторизации
     register_name = By.XPATH, "//label[text() = 'Имя']/parent::div/input"  # Ввод имени при регистрации
     register_button = By.XPATH, "//button[text()='Зарегистрироваться']"  # кнопка регистрации
-    register_password = By.NAME, "Пароль" #Ввод пароля при регистрации
+    register_password = By.NAME, "Пароль"  #Ввод пароля при регистрации
     text_error_register = By.XPATH, "//p[text()='Некорректный пароль']"  # Ошибка "Некорректный пароль" при регистрации
     login_button_in_main_page = By.XPATH, "// button[text() = 'Войти в аккаунт']"  # Кнопка "Войти в Аккаунт" на главной странице
     burger_constructor = By.XPATH, "//p[contains(text(),'Конструктор')]/parent::a"  # Кнопа "Конструктор"
@@ -22,3 +22,4 @@ class Locators:
     sauces = By.XPATH, "//h2[contains(text(),'Соусы')]" # h2 Соусы
     buns = By.XPATH, "//h2[contains(text(),'Булки')]" # h2 Булки
     fillings = By.XPATH, "//h2[contains(text(),'Начинки')]" # h2 Начинки
+    login_title = (By.XPATH, "//h2[text()='Вход']")

@@ -8,7 +8,6 @@ from url import URL
 
 class TestLogIn:
     def test_login_from_main_page(self, driver):
-        driver.get(URL.BASE)
         driver.find_element(*L.login_button_in_main_page).click()
         WebDriverWait(driver, 3).until(EC.visibility_of_element_located(L.login_button))
         driver.find_element(*L.login_email).send_keys(LOGIN)
@@ -16,10 +15,9 @@ class TestLogIn:
         driver.find_element(*L.login_button).click()
         WebDriverWait(driver, 2).until(EC.visibility_of_element_located(L.burger_constructor))
         to_check = driver.find_element(*L.acc_button).text
-        assert 'Личный Кабинет' == to_check, 'вход по кнопке «Войти в аккаунт» на главной'
+        assert 'Личный Кабинет' == to_check, 'вход по кнопке «Войти в аккаунт» на главной не произошел'
 
     def test_login_from_main_page_acc(self, driver):
-        driver.get(URL.BASE)
         driver.find_element(*L.acc_button).click()
         WebDriverWait(driver, 3).until(EC.visibility_of_element_located(L.login_button))
         driver.find_element(*L.login_email).send_keys(LOGIN)
